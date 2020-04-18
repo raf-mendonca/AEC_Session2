@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Formulaire indestructible</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+
+</head>
+<body>
+<div class="container-fluid" id="accordion">
+    <!--Premier Bloc-->
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <p class="lead">Remplir le formulaire de votre chat</p>
+                </button>
+            </h5>
+        </div>
+        <!--Parie Caché-->
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <!---->
+        <h3 class="display-4 mr-3">Formulaire:</h3>
+    <form name="monFormulaire" onsubmit="return validerFormulaire()" method="post">
+        <div class="form-group">
+            <label for="nom"></label>
+            <input type="text" id="nom" name="nom" placeholder="Nom" maxlength="30">
+        </div>
+        <div class="form-group">
+            <label for="age"></label>
+            <input type="number" id="age"  name="age" placeholder="Âge" min="0" max="25">
+        </div>
+        <div class="form-group">
+            <label for="datenaissance"></label>
+            <input type="" id="datenaissance" name="datenaissance" placeholder="Date de naissance" max="1995-04-18">
+        </div>
+        <div class="form-group">
+            <label for="taille"></label>
+            <input type="number" id="taille" name="taille" placeholder="Taille du chat en pouces" max="40">
+        </div>
+        <div class="form-group">
+            <label for="poid"></label>
+            <input type="number" id="poid" name="poid" placeholder="Poids lb" min="0" max="25">
+        </div>
+        <div class="form-group">
+            <label for="vaccine"><p class="lead">Vacciné: </p></label>
+            <input type="checkbox" id="vaccine" name="vaccine">
+        </div>
+        <div class="form-group">
+            <input list="couleurs" name="couleurs" placeholder="Couleur du chat">
+            <datalist id="couleurs">
+                <option value="noir">
+                <option value="blanc">
+                <option value="brun">
+                <option value="mixte">
+            </datalist>
+            <!--<input type="submit" value="Submit">-->
+        </div>
+
+        <div class="form-check form-check-inline">
+            <p class="lead">Domestique ou racé: </p>
+            <input class="form-check-input" type="radio" name="domestique" id="domestique" value="option1">
+            <label class="form-check-label" for="domestique">
+                Domestique
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="race" id="race" value="option2">
+            <label class="form-check-label" for="race">
+                Racé
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="lieuNaisc"></label>
+            <input type="text" id="lieuNaisc" name="Lieu de naissance" placeholder="Lieu de naissance" maxlength="100">
+        </div>
+        <div class="form-group">
+            <label for="photos"><p>Choisir une photo</p></label>
+            <input type="file" class="form-control-file" id="photos" name="photos" placeholder="image" multiple>
+        </div>
+        <div class="form-group">
+            <label for="courriel"></label>
+            <input type="email" id="courriel" name="courriel" placeholder="courriel@example.com">
+        </div>
+        <div class="form-group">
+            <label for="telephone"></label>
+            <input type="tel" id="telephone" name="telephone">
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+    </div>
+</div>
+
+
+
+<script src="https://kit.fontawesome.com/a46d75ba7a.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
