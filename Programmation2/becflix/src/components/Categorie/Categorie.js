@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Row from 'react-bootstrap/Row';
 import { TvShow } from '../TvShow/TvShow';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+
 
 //Declaraçâo de variaveis em javascript
 const tabSuspense = [
