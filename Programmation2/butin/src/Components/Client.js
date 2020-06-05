@@ -20,7 +20,7 @@ export class Client extends React.Component {
           <ListGroup className="list-group-flush">
           <ListGroupItem>
             <a href="mailto:Vivaldi.Vivaldi@gmail.com">
-                {this.props.nom.split(" ")[0]}.
+                {this.props.nom[0]}.
                 {this.props.nom.split(" ")[1]}@gmail.com
             </a>
           </ListGroupItem>
@@ -33,3 +33,5 @@ export class Client extends React.Component {
     );
   }
 }
+
+Client.nom = {nom:composeur};
