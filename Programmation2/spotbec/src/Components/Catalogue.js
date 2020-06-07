@@ -7,46 +7,47 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import { Albums } from "./Albums";
 
+
 const liste = [
     {
         src: require("../img/arcade-fire.jpg"),
-        nom: "Arcade Fire",
-        album: "Funeral",
+        artiste: "Arcade Fire",
+        nomAlbum: "Funeral",
     },
     {
         src: require("../img/alfa-rococo.jpg"),
-        nom: "Alfa Rococo",
-        album: "Léver l'ancre",
+        artiste: "Alfa Rococo",
+        nomAlbum: "Léver l'ancre",
     },
     {
         src: require("../img/ariane-moffat.jpg"),
-        nom: "Ariane Moffat",
-        album: "Aquanaute",
+        artiste: "Ariane Moffat",
+        nomAlbum: "Aquanaute",
     },
     {
         src: require("../img/jean-leloup.jpg"),
-        nom: "Jean Leloup",
-        album: "Paradis city",
+        artiste: "Jean Leloup",
+        nomAlbum: "Paradis city",
     },
     {
         src: require("../img/lisa-leblanc.jpg"),
-        nom: "Lisa LeBlanc",
-        album: "Lisa LeBlanc",
+        artiste: "Lisa LeBlanc",
+        nomAlbum: "Lisa LeBlanc",
     },
     {
         src: require("../img/caveboy.jpg"),
-        nom: "Caveboy",
-        album: "Kiss in the park",
+        artiste: "Caveboy",
+        nomAlbum: "Kiss in the park",
     },
     {
         src: require("../img/mes-aieux.jpg"),
-        nom: "Mes aieux",
-        album: "Dégéneration",
+        artiste: "Mes aieux",
+        nomAlbum: "Dégéneration",
     },
     {
         src: require("../img/celine-dion.jpg"),
-        nom: "Celine Dion",
-        album: "The essential",
+        artiste: "Celine Dion",
+        nomAlbum: "The essential",
     },
 ];
 
@@ -106,19 +107,24 @@ export class Catalogue extends React.Component {
           <Albums className=""
             key={"perso" + i}
             src={element.src}
-            nom={element.nom}
-            album={element.album}
+            artiste={element.artiste}
+            nomAlbum={element.nomAlbum}
           ></Albums>
         ));
       }
-      else{
-        const searchResult = this.state.listeAlbums.filter(l => l.nom.toLowerCase().includes(this.state.rechercher.toLowerCase()));
+      else{        
+        const searchResult = this.state.listeAlbums.filter( album => {
+          const nomArtiste = album.artiste.toLowerCase();
+          const nomAlbum = album.nomAlbum.toLowerCase();
+          const rechercheString = this.state.rechercher.toLowerCase();
+          return nomArtiste.includes(rechercheString) || nomAlbum.includes(rechercheString);
+        });
         return searchResult.map((element, i) => (
             <Albums className=""
             key={"perso" + i}
             src={element.src}
-            nom={element.nom}
-            album={element.album}
+            artiste={element.artiste}
+            nomAlbum={element.nomAlbum}
           ></Albums>
         ));
       }

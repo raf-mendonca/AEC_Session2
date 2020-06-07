@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container"; 
 import Row from "react-bootstrap/Row"; 
 import Col from "react-bootstrap/Col"; 
+import {logo} from "../img/logo.png";
 import {Catalogue} from './Catalogue'
 import {Connexion} from './Connexion'
 import {Deconnexion} from './Deconnexion'
@@ -24,7 +25,7 @@ export class Accueil extends React.Component {
         <Container fluid>
           <Row>
             <Col>
-              <img src={logo} alt="BecFlix" width="100px"/>
+              <img src={logo} alt="Spotbec" width="100px"/>
             </Col>
             <Col>
               <Deconnexion onClick={this.verifierConnexion} />

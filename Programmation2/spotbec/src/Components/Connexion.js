@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import {Container, Row, Col} from "react-bootstrap";
+import {logo} from "../img/logo.png";
 
 export class Connexion extends React.Component {
   constructor(props) {  
@@ -26,8 +27,8 @@ export class Connexion extends React.Component {
         <Jumbotron>
           <Row className="text-center">
             <Col>
-              <h1 >CONNEXION BOTTIN</h1>
-              <img src={logo} alt="Classique" width="100px" className="text-center"/>
+              <h1 >SpotBec</h1>
+              <img src={logo} alt="Spotbec" width="" className="text-center"/>
             </Col>
           </Row>
           <Row>
