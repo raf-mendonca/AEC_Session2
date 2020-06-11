@@ -1,23 +1,33 @@
 {
   "files": {
-    "main.css": "./static/css/main.5f361e03.chunk.css",
-    "main.js": "./static/js/main.b4232482.chunk.js",
-    "main.js.map": "./static/js/main.b4232482.chunk.js.map",
+    "main.css": "./static/css/main.7f57ad10.chunk.css",
+    "main.js": "./static/js/main.06fa8a51.chunk.js",
+    "main.js.map": "./static/js/main.06fa8a51.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.8dd7c26f.js",
     "runtime-main.js.map": "./static/js/runtime-main.8dd7c26f.js.map",
-    "static/js/2.bf8ac643.chunk.js": "./static/js/2.bf8ac643.chunk.js",
-    "static/js/2.bf8ac643.chunk.js.map": "./static/js/2.bf8ac643.chunk.js.map",
+    "static/css/2.af3c1da9.chunk.css": "./static/css/2.af3c1da9.chunk.css",
+    "static/js/2.17112fa5.chunk.js": "./static/js/2.17112fa5.chunk.js",
+    "static/js/2.17112fa5.chunk.js.map": "./static/js/2.17112fa5.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.228cf2d03020471d0581d7c90cfa0d02.js": "./precache-manifest.228cf2d03020471d0581d7c90cfa0d02.js",
+    "precache-manifest.e4f4bbddb5111764fe0cd2d025c67b3c.js": "./precache-manifest.e4f4bbddb5111764fe0cd2d025c67b3c.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "./static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.bf8ac643.chunk.js.LICENSE.txt": "./static/js/2.bf8ac643.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "./static/media/logo.5d5d9eef.svg"
+    "static/css/2.af3c1da9.chunk.css.map": "./static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.7f57ad10.chunk.css.map": "./static/css/main.7f57ad10.chunk.css.map",
+    "static/js/2.17112fa5.chunk.js.LICENSE.txt": "./static/js/2.17112fa5.chunk.js.LICENSE.txt",
+    "static/media/alfa-rococo.jpg": "./static/media/alfa-rococo.0bcf90a3.jpg",
+    "static/media/arcade-fire.jpg": "./static/media/arcade-fire.25048abd.jpg",
+    "static/media/ariane-moffat.jpg": "./static/media/ariane-moffat.c14624d2.jpg",
+    "static/media/caveboy.jpg": "./static/media/caveboy.94b505ec.jpg",
+    "static/media/celine-dion.jpg": "./static/media/celine-dion.06c03fc0.jpg",
+    "static/media/jean-leloup.jpg": "./static/media/jean-leloup.d31d228e.jpg",
+    "static/media/lisa-leblanc.jpg": "./static/media/lisa-leblanc.7bd28f8e.jpg",
+    "static/media/mes-aieux.jpg": "./static/media/mes-aieux.5851dd25.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.8dd7c26f.js",
-    "static/js/2.bf8ac643.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.b4232482.chunk.js"
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.17112fa5.chunk.js",
+    "static/css/main.7f57ad10.chunk.css",
+    "static/js/main.06fa8a51.chunk.js"
   ]
 }
