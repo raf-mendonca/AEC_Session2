@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import {Container, Row, Col} from "react-bootstrap";
-import {logo} from "../img/logo.png";
+import logoSpotbec from "../img/logoSpotbec.png";
 
 export class Connexion extends React.Component {
   constructor(props) {  
@@ -23,12 +23,12 @@ export class Connexion extends React.Component {
 
   render() {
     return (
-      <Container>
-        <Jumbotron>
+      <Jumbotron fluid>
+        <Container>
           <Row className="text-center">
             <Col>
               <h1 >SpotBec</h1>
-              <img src={logo} alt="Spotbec" width="" className="text-center"/>
+              <img src={logoSpotbec} alt="Spotbec" width="" className="text-center"/>
             </Col>
           </Row>
           <Row>
@@ -44,14 +44,15 @@ export class Connexion extends React.Component {
                   <Form.Control type="password" placeholder="Password"/>
                 </Form.Group>
 
-                <Button variant="primary" onClick={this.handleConnexion}>
+                <Button variant="secondary" onClick={this.handleConnexion}>
                   Submit
                 </Button>
               </Form>
             </Col>
           </Row>
-        </Jumbotron>
-      </Container> 
+        </Container> 
+      </Jumbotron>
+      
     );
   }
 }

@@ -7,7 +7,7 @@ export class Deconnexion extends React.Component {
   }
   render() {
     return (
-      <Button variant="primary" onClick={() => this.handleDeconnexion()}>
+      <Button variant="secondary" onClick={() => this.handleDeconnexion()}>
         Déconnexion
       </Button>
     );

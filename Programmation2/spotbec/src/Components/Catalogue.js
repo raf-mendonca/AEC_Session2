@@ -8,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import { Albums } from "./Albums";
 import { AlbumDetails } from "./AlbumDetails";
 import Modal from "react-bootstrap/Modal";
+import ModalDialog from 'react-bootstrap/ModalDialog'
+import { Paroles } from "./Paroles";
 
 // album = {
 //   src: require("../img/arcade-fire.jpg"),
@@ -257,11 +259,13 @@ const liste = [
 export class Catalogue extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { rechercher: "", listeAlbums: liste, cestDansAlbum: false };
+    this.state = { rechercher: "", listeAlbums: liste, cestDansAlbum: false , montrerParole: false};
     this.Rechercher = this.Rechercher.bind(this);
     this.Effacer = this.Effacer.bind(this);
     this.HandleAlbum = this.HandleAlbum.bind(this);
     this.CacherAlbum = this.CacherAlbum.bind(this);
+    this.HandleParole = this.HandleParole.bind(this);
+    this.CacherParole = this.CacherParole.bind(this);
   }
 
   HandleAlbum(index) {
@@ -269,8 +273,20 @@ export class Catalogue extends React.Component {
     this.setState({
       cestDansAlbum: true,
       album: this.state.listeAlbums[index],
+
+      montrerParole: true,
+      album: this.state.listeAlbums[index],
     });
   }
+
+  HandleParole(index) {
+    console.log(this.state.listeAlbums[index].parole);
+    this.setState({
+      montrerParole: true,
+      album: this.state.listeAlbums[index],
+    });
+  }
+
 
   Rechercher() {
     let nom = document.getElementById("inputRechercher").value;
@@ -312,10 +328,21 @@ export class Catalogue extends React.Component {
           <h2 className="Display-4 m-3">Albums</h2>
         </Row>        
         <Row>
-          <Modal.Dialog>          
-            {this.state.cestDansAlbum && <div><AlbumDetails album={this.state.album} />
+          
+            <Modal.Dialog className="special_modal">
+              {this.state.cestDansAlbum && <div><AlbumDetails album={this.state.album} />
               <Button variant="secondary" onClick={this.CacherAlbum}>Précédent</Button></div> } 
-          </Modal.Dialog>
+            </Modal.Dialog>
+
+            <Modal.Dialog className="special_modal">
+              {this.state.montrerParole && <div><Paroles album={this.state.album} />
+                <Button variant="secondary" onClick={this.CacherParole}>Précédent</Button></div> } 
+            </Modal.Dialog>
+          
+          
+        </Row>
+        <Row>
+          
         </Row>
         <Row>
           {this.AfficherAlbums()}
@@ -330,8 +357,16 @@ export class Catalogue extends React.Component {
     });
   }
 
+  CacherParole() {
+    this.setState({
+      montrerParole: false
+    });
+  }
+
   AfficherAlbums() {
+
     if (this.state.rechercher === "") {
+
       // Chaque fois que l'utilisateur clique sur l'album, il envoie l'index à HandleAlbum
       return this.state.listeAlbums.map((element, i) => (
         <div onClick={(e) => this.HandleAlbum(i)}>
@@ -341,6 +376,7 @@ export class Catalogue extends React.Component {
             src={element.src}
             artiste={element.artiste}
             nomAlbum={element.nomAlbum}
+            
           ></Albums>
         </div>
       ));
@@ -362,6 +398,7 @@ export class Catalogue extends React.Component {
             src={element.src}
             artiste={element.artiste}
             nomAlbum={element.nomAlbum}
+            
           ></Albums>
         </div>
       ));

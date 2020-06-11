@@ -15,8 +15,7 @@ export class AlbumDetails extends React.Component {
 
   render() {
     return (
-      <div>
-        
+      <div>        
           <h1>{this.props.album.nomAlbum}</h1>
           <Col>
             <ul>
