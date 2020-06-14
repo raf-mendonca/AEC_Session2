@@ -22,6 +22,7 @@ export class Albums extends React.Component {
               <Card.Title><p className="mb-2 text-muted">{this.props.nomAlbum}</p></Card.Title>
               <Card.Subtitle><p className="mb-2 text-muted small">{this.props.artiste}</p></Card.Subtitle>
           </Card.Body>
+          
         </Card>
       </Col>
     );

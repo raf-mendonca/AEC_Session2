@@ -19,7 +19,7 @@ const liste = [
     artiste: "Arcade Fire",
     nomAlbum: "Funeral",
     musiques: [
-      { nomMusique: <a href="">Rebellion (Lies)</a>, parole: "\Sleeping is giving in\
+      { nomMusique: <a href="#">Rebellion (Lies)</a>, parole: "\Sleeping is giving in\
       No matter what the time is\
       Sleeping is giving in\
       So lift those heavy eyelids\
@@ -61,7 +61,7 @@ const liste = [
       Every time you close your eyes\
       (Lies, lies)" },
 
-      { nomMusique: "Neighborhood #1 (Tunnels)", parole: "And if the snow buries my, my neighborhood\
+      { nomMusique: <a href="#">Neighborhood #1 (Tunnels)</a>, parole: "And if the snow buries my, my neighborhood\
       And if my parents are crying\
       Then I'll dig a tunnel from my window to yours\
       Yeah, a tunnel from my window to yours\
@@ -109,7 +109,7 @@ const liste = [
     artiste: "Alfa Rococo",
     nomAlbum: "Léver l'ancre",
     musiques: [
-      { nomMusique: "Les Jours De Pluie", parole: "Les journées de pluie ont noirci le décor\
+      { nomMusique: <a href="#">Les Jours de Pluie</a>, parole: "Les journées de pluie ont noirci le décor\
       Et les nouvelles sont mauvaises encore\
       Les gens se font beaucoup moins de bien que de tort\
       Sur tes deux oreilles tu dors encore\
@@ -150,7 +150,7 @@ const liste = [
       Rendors-toi\
       Rendors-toi" },
 
-      { nomMusique: "Lever L'Ancre", parole: "Là-bas le ciel est si haut\
+      { nomMusique:  <a href="#">Lever l'Ancre</a>, parole: "Là-bas le ciel est si haut\
       Et le rivage délicat\
       Les aurores sont roses\
       Et le temps n'est jamais froid\
@@ -229,7 +229,7 @@ const liste = [
     artiste: "Ariane Moffat",
     nomAlbum: "Le Coeur Dans La Tête",
     musiques: [
-      { nomMusique: "Combustion Lente", parole: "Je suis un sablier\
+      { nomMusique:  <a href="#">Combustion Lente</a>, parole: "Je suis un sablier\
       Devant mon feu de foyer\
       Les flammes coupent la nuit en deux\
       Et réchauffent décembre\
@@ -256,7 +256,7 @@ const liste = [
       Je ferai fondre décembre\
       Demain au petit matin\
       Je ferai fondre des cendres" },
-      { nomMusique: "Se Perdre", parole: "Se perdre\
+      { nomMusique:  <a href="#">Se Perdre</a>, parole: "Se perdre\
       Dans un ciel tout bleu\
       Se perdre\
       Dans un verre pour deux\
@@ -307,7 +307,7 @@ const liste = [
     artiste: "Jean Leloup",
     nomAlbum: "Paradis city",
     musiques: [
-      { nomMusique: "Paradis City", parole: "Tous les chemins mènent en enfer, et quand tu vois la porte en fer\
+      { nomMusique:  <a href="#">Paradis City</a>, parole: "Tous les chemins mènent en enfer, et quand tu vois la porte en fer\
       Il est trop tard pour te refaire, retour au concessionnaire\
       Toutes les routes meurent sur terre\
       Les morts ont appris à se taire\
@@ -336,7 +336,7 @@ const liste = [
       À Paradis City, à Paradis City\
       Et je cry, je cry, baby wou\
       À Paradis City, à Paradis City" },
-      { nomMusique: "Willie", parole: "Je suis si vieux et où sont mes petites vieilles ?\
+      { nomMusique: <a href="#">Willie</a>, parole: "Je suis si vieux et où sont mes petites vieilles ?\
       Pour ma part, il me tarde de partir en voyage\
       Quitter cette famille de terreurs qui fourmillent\
       Les chiens aboient le train passe\
@@ -366,7 +366,7 @@ const liste = [
     artiste: "Lisa LeBlanc",
     nomAlbum: "Lisa LeBlanc",
     musiques: [
-      { nomMusique: "Cerveau Ramolli", parole: "Tellement pu rien qui s'passe dans ma vie\
+      { nomMusique:  <a href="#">Cerveau Ramolli</a>, parole: "Tellement pu rien qui s'passe dans ma vie\
       J'lis des livres, j'regarde la tivi pis des films en jogging\
       Tellement pu rien qui s'passe dans ma vie\
       J'me couche à neuf heures, j'me lève de bonne heure pour aucune raison spécifique\
@@ -386,7 +386,7 @@ const liste = [
       Chu rendue plate à mourir, j'feele mon cerveau ramollir\
       Chu rendue plate à mourir, j'feele mon cerveau ramollir\
       Chu rendue plate à mourir, j'feele mon cerveau ramollir" },
-      { nomMusique: "Du Duvet Dans Les Poches", parole: "Les yeux collés comme du Krazy Glue\
+      { nomMusique: <a href="#">Du Duvet Dans Les Poches</a>, parole: "Les yeux collés comme du Krazy Glue\
       Y reste pu grand couleur sur mes joues\
       La tête ailleurs depuis j'sais pu quand\
       Tu comptes pu les jours quand t'es rendu là\
@@ -429,7 +429,7 @@ const liste = [
     artiste: "Caveboy",
     nomAlbum: "Kiss in the park",
     musiques: [
-      { nomMusique: "Silk For Gold", parole: "How long would I have to wait\
+      { nomMusique: <a href="#">Silk For Gold</a>, parole: "How long would I have to wait\
       So lost standing at your gate\
       I called but I don't know why\
       So clear when I cross the line\
@@ -447,7 +447,7 @@ const liste = [
       I forget what your touch was like\
       It's not every day that I feel the will\
       So take me now, I'm surrendering" },
-      { nomMusique: "I Wonder", parole: "Discovering the way\
+      { nomMusique: <a href="#">I Wonder</a>, parole: "Discovering the way\
       After falling on my knees again\
       Burning up 'cause there's nothing to save me\
       From the desert sun\
@@ -602,18 +602,15 @@ export class Catalogue extends React.Component {
           <h2 className="Display-4 m-3">Albums</h2>
         </Row>        
         <Row>
-          
             <Modal.Dialog className="special_modal">
               {this.state.cestDansAlbum && <div><AlbumDetails album={this.state.album} />
               <Button variant="secondary" onClick={this.CacherAlbum}>Précédent</Button></div> } 
             </Modal.Dialog>
-
             <Modal.Dialog className="special_modal">
               {this.state.montrerParole && <div><Paroles album={this.state.album} />
                 <Button variant="secondary" onClick={this.CacherParole}>Précédent</Button></div> } 
             </Modal.Dialog>
-          
-          
+                     
         </Row>
         <Row>
           
