@@ -24,14 +24,17 @@ export class Accueil extends React.Component {
       return (
         <Container fluid>
           <Row>
-            <Col>
+            <Col className="text-center">
               <img src={logoSpotbec} alt="Spotbec" width="100px"/>
             </Col>
-            <Col>
-              <Deconnexion onClick={this.verifierConnexion} />
-            </Col>
+            
           </Row>
           <Catalogue />
+          <Row>
+            <Col className="text-center">
+              <Deconnexion onClick={this.verifierConnexion} />
+            </Col>  
+          </Row>
         </Container>  
       )
     }

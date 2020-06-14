@@ -21,8 +21,7 @@ export class Paroles extends React.Component {
             <p>
               {this.afficherParole()}
             </p>
-          </Col>
-               
+          </Col>               
       </div>
     );
   }
