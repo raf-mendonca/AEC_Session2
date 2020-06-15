@@ -1,3 +1,6 @@
+Pour accèder au build de ce projet, suvrez le lien:
+https://raf-mendonca.github.io/AEC_Session2/Programmation2/spotbec/build/index.html
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
