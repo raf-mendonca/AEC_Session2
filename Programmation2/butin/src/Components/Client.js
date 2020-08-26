@@ -34,4 +34,3 @@ export class Client extends React.Component {
   }
 }
 
-Client.nom = {nom:composeur};

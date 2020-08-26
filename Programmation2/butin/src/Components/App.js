@@ -4,7 +4,7 @@ import {Bottin} from './Bottin';
 
 function App() {
   return (
-    <Accueil/>
+    <Bottin/>
   );
 }
 
