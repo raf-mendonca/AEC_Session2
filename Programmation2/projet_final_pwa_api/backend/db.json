@@ -1,0 +1,21 @@
+{
+    "utilisateurs": [{
+        "id":1,
+        "prenom": "Rafael",
+        "email": "rapedrao@hotmail.com"
+    }, {
+        "id":2,
+        "prenom": "Laurent",
+        "email": "rapedrao@hotmail.com" 
+    }, {
+        "id":3,
+        "prenom": "Shany",
+        "email": "shany.carle@gmail.com" 
+    }]
+}
+
+{
+    "utilisateur": "Douglas",
+    "titre": "Bon voyage",
+    "imageURL": "http://"
+}
