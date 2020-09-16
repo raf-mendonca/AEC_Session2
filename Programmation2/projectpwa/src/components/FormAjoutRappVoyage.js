@@ -1,8 +1,8 @@
 import React from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
-import {Redirect} from "react-router-dom";
-import {API} from "../constantes";
-import {toast} from "react-toastify";
+import {Redirect} from "react-router-dom"
+import { API } from '../constantes.js';
+import {toast} from "react-toastify"
 
 export class FormAjoutRappVoyage extends React.Component {
   constructor(props) {
@@ -11,19 +11,19 @@ export class FormAjoutRappVoyage extends React.Component {
 
     this.handleAdd = this.handleAdd.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
-    this.addRapport = this.addRapport.bind(this); //addPokemon
+    this.addPokemon = this.addRapport.bind(this);
   }
 
-  async addRapport(titre, imageURL, local, rapporVoyage) { 
+  async addRapport(nom,titre,photo, rapport_voyage) { 
     try{ 
-      const response = await fetch(API, { 
+      const response = await fetch('https://crudcrud.com/api/d2aeca13f99f4360940ac77caea001e2/voyages', { 
         method:'POST', 
         headers: {'Content-Type': 'application/json'  }, 
         body:JSON.stringify({
-          titre: titre,
-          imageURL: imageURL,
-          rapporVoyage: rapporVoyage,
-          nouvelle: local 
+            theme: titre,
+            utilisateur: nom,            
+            picture: photo,
+            rapport: rapport_voyage          
         }) 
       }); 
       if(response.ok){ 
@@ -40,21 +40,20 @@ export class FormAjoutRappVoyage extends React.Component {
    } 
 }
 
-
   handleAdd(event){
     event.preventDefault();
     
-    const titre = document.getElementById('titre').value;
-    const imageURL = document.getElementById('imageURL').value;
-    const nouvelle = document.getElementById('nouvelle').value;
-    const rapporVoyage = document.getElementById('rapporVoyage').value;
+    const titre = document.getElementById('titreRapport').value;
+     const nom = document.getElementById('nomRapport').value;
+    const photo = document.getElementById('photoRapport').value;
+    const rapport_voyage = document.getElementById('rapport_voyageRapport').value;
 
-    this.addRapport(titre,  imageURL, nouvelle, rapporVoyage);
+    this.addRapport(titre,nom,photo,rapport_voyage);
   }
 
   handlePhoto(event){
-    const photos = document.getElementById(' imageURL').value;
-    this.setState( { imageURL : photos});
+    const photos = document.getElementById('photoRapport').value;
+    this.setState( {photo : photos});
   }
 
 
@@ -66,27 +65,26 @@ export class FormAjoutRappVoyage extends React.Component {
         <Row>
           <Col>
             <Form>
-              <Form.Group controlId="titre">
-                <Form.Label>Titre rapport de voyage</Form.Label>
-                <Form.Control type="text" placeholder="Entrer le titre" />
+              <Form.Group controlId="titreRapport">
+                <Form.Label>Titre</Form.Label>
+                <Form.Control type="text" placeholder="Entrer le titre du Rapport de voyage" />
               </Form.Group>
-              <Form.Group controlId="photoPokemon">
+              <Form.Group controlId="nomRapport">
+                <Form.Label>Nom du utilisateur</Form.Label>
+                <Form.Control type="text" placeholder="Entrer votre nom" />
+              </Form.Group>
+              <Form.Group controlId="photoRapport">
                 <Form.Label>URL d'une photo de la destination</Form.Label>
                 <Form.Control type="text" placeholder="Entrer une URL valide" onBlur={this.handlePhoto}/>
               </Form.Group>
-              {this.state.imageURL !== "" && <Image src={this.state.imageURL} rounded width="125"/>}
-              <Form.Group controlId="nouvelle">
-                <Form.Label>Local</Form.Label>
-                <Form.Control type="text" placeholder="Entrer le nom de votre destination de voyage" />
+              {this.state.photo !== "" && <Image src={this.state.photo} rounded width="125"/>}
+              <Form.Group controlId="rapport_voyageRapport">
+                <Form.Label>Décrivez votre expérience de voyage</Form.Label>
+                <Form.Control type="text" placeholder="Entrer le nom de l'attaque 1" />
               </Form.Group>
-              <Form.Group controlId="rapporVoyage">
-                <Form.Label>Racontez votre histoire de voyage</Form.Label>
-                <Form.Control type="text" placeholder="Entrer votre rapport de voyage" />
-              </Form.Group>
-
-            <Button variant="primary" type="submit" onClick={this.handleAdd}>
-                Enregistrer
-            </Button>
+                <Button variant="primary" type="submit" onClick={this.handleAdd}>
+                    Enregistrer
+                </Button>
             </Form>  
             </Col>    
           </Row>

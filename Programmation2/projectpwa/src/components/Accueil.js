@@ -32,12 +32,12 @@ export class Accueil extends React.Component {
         <Row>
         {this.state.donneesRecues.map((key,i) => (
             <Rapports 
-                    titre={key.titre}
+                    titre={key.theme}
                     id={key._id}
                     key={key.titre + key._id}
-                    utilisateur={key.utilisateur}
-                    nouvelle={key.nouvelle} 
-                    imageURL={key.imageURL}
+                    nom={key.utilisateur}
+                    photo={key.picture} 
+                    rapport_voyage={key.rapport}
                     >
             </Rapports>
           ))}

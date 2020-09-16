@@ -13,11 +13,11 @@ export class Rapports extends React.Component {
     return ( 
       <CardGroup>
             <Card > 
-              <Card.Img variant="top" src={this.props.imageURL} rounded width="125" />       
+              <Card.Img variant="top" src={this.props.photo} rounded width="125" />       
               <Card.Body>
                 <Link to={"Rapports/"+ this.props.titre + "?id=" + this.props.id}>
-                    <Card.Subtitle>{this.props.nouvelle}</Card.Subtitle>
-                    <Card.Text className="text-justify">{this.props.utilisateur}</Card.Text>
+                    <Card.Subtitle>{this.props.nom}</Card.Subtitle>
+                    <Card.Text className="text-justify">{this.props.rapport_voyage}</Card.Text>
                 </Link>
               </Card.Body>
             </Card>

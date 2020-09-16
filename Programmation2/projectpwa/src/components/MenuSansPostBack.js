@@ -17,7 +17,7 @@ export class MenuSansPostBack extends React.Component {
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
             <NavLink  className="mr-3" exact to="/" >Accueil</NavLink>
-            <NavLink  className="mr-3" to="/FormAjoutRappVoyage">Ajouter Voyage</NavLink> 
+            <NavLink  className="mr-3" to="/AjouterRapport">Ajouter Voyage</NavLink> 
             <NavLink  className="mr-3" to="/FormEditerRapport">Editer Voyage</NavLink> 
             <NavLink  className="mr-3" to="/ShortenURL">POST</NavLink>
         </Nav>
