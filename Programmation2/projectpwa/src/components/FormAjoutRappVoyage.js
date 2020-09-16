@@ -1,8 +1,8 @@
 import React from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
-import {Redirect} from "react-router-dom"
+import {Redirect} from "react-router-dom";
 import { API } from '../constantes.js';
-import {toast} from "react-toastify"
+import {toast} from "react-toastify";
 
 export class FormAjoutRappVoyage extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export class FormAjoutRappVoyage extends React.Component {
 
   async addRapport(nom,titre,photo, rapport_voyage) { 
     try{ 
-      const response = await fetch('https://crudcrud.com/api/d2aeca13f99f4360940ac77caea001e2/voyages', { 
+      const response = await fetch(API, { 
         method:'POST', 
         headers: {'Content-Type': 'application/json'  }, 
         body:JSON.stringify({
@@ -80,7 +80,7 @@ export class FormAjoutRappVoyage extends React.Component {
               {this.state.photo !== "" && <Image src={this.state.photo} rounded width="125"/>}
               <Form.Group controlId="rapport_voyageRapport">
                 <Form.Label>Décrivez votre expérience de voyage</Form.Label>
-                <Form.Control type="text" placeholder="Entrer le nom de l'attaque 1" />
+                <Form.Control type="text" placeholder="Entrer votre expérience de voyage." />
               </Form.Group>
                 <Button variant="primary" type="submit" onClick={this.handleAdd}>
                     Enregistrer

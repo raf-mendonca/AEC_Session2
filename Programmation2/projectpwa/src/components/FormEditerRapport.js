@@ -1,23 +1,23 @@
 import React , {useState , useEffect} from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
 import {Redirect} from "react-router-dom";
-import {API} from "../constantes";
+import { API } from '../constantes.js';
 import {toast} from "react-toastify"
 
 function FormEditerRapports(props){
-  const [donneesRecues , setDonneesRecues] = useState({titre: "", imageURL: "", nouvelle : "", utilisateur: "", rapporVoyage: "" });
-  const [voyageID , setVoyageID] = useState(props.location.search.substring(5,props.location.search.length));
-  const [images , setImage] = useState("");
+  const [donneesRecues , setDonneesRecues] = useState({titre: '',utilisateur: '', picture: '', rapport : '' });
+  const [rapportID , setRapportID] = useState(props.location.search.substring(4,props.location.search.length));
+  const [photos , setPhotos] = useState("");
   //Ajout de la gestion des erreurs
   useEffect(() => {
-    getVoyageInfos();
+    getRapportInfos();
   },[]); //Si on enlève le second paramètre, on obtient une boucle infinie.
 
   //On récupère le Pokemon pour ensuite remplir le formulaire.
-  async function getVoyageInfos() {
+  async function getRapportInfos() {
     try {
       
-      const response = await fetch(API + voyageID);
+      const response = await fetch(API+rapportID);
       const reponseDeApi = await response.json();
       setDonneesRecues(reponseDeApi);
       if (!response.ok) {
@@ -28,21 +28,21 @@ function FormEditerRapports(props){
     }
   }
 
-  async function editVoyage(titre,image,nouvelle,utilisateur,rapporVoyage) { 
+  async function editRapport(titre,nom,photo,rapport_voyage) { 
     try{ 
-      const response = await fetch(API + voyageID, { 
+      const response = await fetch(API + rapportID, { 
         method:'PUT', 
         headers: {'Content-Type': 'application/json'  }, 
         body:JSON.stringify({
-          titre: titre,
-          imageURL: image,
-          utilisateur: utilisateur,
-          rapporVoyage: rapporVoyage
-          }) 
+            theme: titre,
+            utilisateur: nom,            
+            picture: photo,
+            rapport: rapport_voyage        
+        }) 
       }); 
       if(response.ok){ 
         props.history.push("/");
-        toast.success("Modification de voyage" + titre);
+        toast.success("Modification du Rapport de Voyage " + titre);
 
         return response; 
       } 
@@ -53,16 +53,14 @@ function FormEditerRapports(props){
    } 
 }
 
-async function removeVoyage() { 
+async function removeRapport() { 
     try{ 
-    const response = await fetch(API + voyageID, { 
+    const response = await fetch(API + rapportID, { 
       method:'delete', 
     }); 
-    if(response.ok){ 
-      //const jsonResponse = await response.json(); 
+    if(response.ok){      
       props.history.push("/");
-      toast.error("Supression de voyage ");
-
+      toast.error("Supression du Rapport de Voyage ");
       return response; 
     } 
     throw new Error('Request failed!'); 
@@ -75,18 +73,17 @@ async function removeVoyage() {
   function handleEdit(event){
     event.preventDefault();
     
-    const titre = document.getElementById('titreVoyage').value;
-    const image = document.getElementById('imageVoyage').value;
-    const nouvelle = document.getElementById('destinationVoyage').value;
-    const utilisateur = document.getElementById('utilisateurVoyage').value;
-    const rapporVoyage = document.getElementById('rapportVoyage').value;
+    const titre = document.getElementById('titreRapport').value;
+    const nom = document.getElementById('nomRapport').value;
+    const photo = document.getElementById('photoRapport').value;
+    const rapport_voyage = document.getElementById('rapport_voyageRapport').value;
 
-   editVoyage(titre,image,nouvelle,utilisateur,rapporVoyage);
+    editRapport(titre,nom,photo,rapport_voyage);
   }
 
   function handlePhoto(event){
-    const images = document.getElementById('imageVoyage').value;
-    setImage(images);
+    const photos = document.getElementById('photoRapport').value;
+    setPhotos(photos);
   }
     return (
       <>
@@ -94,35 +91,31 @@ async function removeVoyage() {
         <Row>
           <Col>
             <Form>
-              <Form.Group controlId="titreVoyage">
-                <Form.Label>Titre voyage</Form.Label>
-                <Form.Control type="text" defaultValue={donneesRecues.titre}/> {/*/ Faire le test avec value*/}
+              <Form.Group controlId="titreRapport">
+                <Form.Label>Titre</Form.Label>
+                <Form.Control type="text" defaultValue={donneesRecues.theme}/> {/*/ Faire le test avec value*/}
               </Form.Group>
-              <Form.Group controlId="imageVoyage">
+              <Form.Group controlId="nomRapport">
+                <Form.Label>Nom du utilisateur</Form.Label>
+                <Form.Control type="text" defaultValue={donneesRecues.utilisateur}/> {/*/ Faire le test avec value*/}
+              </Form.Group>
+              <Form.Group controlId="photoRapport">
                 <Form.Label>URL d'une photo de la destination</Form.Label>
-                <Form.Control type="text" placeholder="Entrer une URL valide" onBlur={handlePhoto} defaultValue={donneesRecues.imageURL}/>
+                <Form.Control type="text" placeholder="Entrer une URL valide" onBlur={handlePhoto} defaultValue={donneesRecues.picture}/>
               </Form.Group>
-              {donneesRecues.imageURL !== "" && <Image src={donneesRecues.imageURL} rounded width="125"/>}
-              <Form.Group controlId="destinationVoyage">
-                <Form.Label>Destination</Form.Label>
-                <Form.Control type="text" placeholder="Ex: New York, Ny, USA"  defaultValue={donneesRecues.nouvelle}/>
+              {donneesRecues.picture !== "" && <Image src={donneesRecues.picture} rounded width="125"/>}
+              <Form.Group controlId="rapport_voyageRapport">
+                <Form.Label>Décrivez votre expérience de voyage</Form.Label>
+                <Form.Control type="text" placeholder="Entrer votre expérience de voyage." defaultValue={donneesRecues.rapport}/>
               </Form.Group>
-              <Form.Group controlId="utilisateurVoyage">
-                <Form.Label>Nom de l'utilisateur</Form.Label>
-                <Form.Control type="text" placeholder="Entrer le nom de l'utisateur"  defaultValue={donneesRecues.utilisateur}/>
-              </Form.Group>
-              <Form.Group controlId="rapportVoyage">
-                <Form.Label>Description de voyage</Form.Label>
-                <Form.Control type="text" placeholder="Description de voyage" defaultValue={donneesRecues.rapporVoyage}/> {/*/ Faire le test avec value*/}
-              </Form.Group>
-
+             
             <Button variant="primary" type="submit" onClick={handleEdit}>
                 Enregistrer
             </Button>
             </Form>  
             </Col>    
           </Row>
-          <p className="btn btn-danger mt-5" onClick={removeVoyage}>Supprimer voyage</p>
+          <p className="btn btn-danger mt-5" onClick={removeRapport}>Supprimer Rapport de voyage</p>
         </Container>
       </>
     );

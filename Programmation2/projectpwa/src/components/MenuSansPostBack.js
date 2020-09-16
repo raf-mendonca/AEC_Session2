@@ -18,7 +18,7 @@ export class MenuSansPostBack extends React.Component {
         <Nav className="mr-auto">
             <NavLink  className="mr-3" exact to="/" >Accueil</NavLink>
             <NavLink  className="mr-3" to="/AjouterRapport">Ajouter Voyage</NavLink> 
-            <NavLink  className="mr-3" to="/FormEditerRapport">Editer Voyage</NavLink> 
+            <NavLink  className="mr-3" to="/EditerRapport">Editer Voyage</NavLink> 
             <NavLink  className="mr-3" to="/ShortenURL">POST</NavLink>
         </Nav>
        

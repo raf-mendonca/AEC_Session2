@@ -8,7 +8,7 @@ import { Accueil } from './components/Accueil';
 import { MenuSansPostBack } from './components/MenuSansPostBack';
 import { AjouterRapport } from './components/AjouterRapport';
 import { BoutonAjouterRapport } from './components/BoutonAjouterRapport';
-
+import { EditerRapport } from './components/EditerRapport';
 import FormEditerRapport from './components/FormEditerRapport';
 import {Route, Switch, Redirect } from 'react-router-dom' 
 import { ToastContainer } from 'react-toastify';
@@ -20,15 +20,18 @@ function App() {
   let location = useLocation();
   return (
   <>
-  <ToastContainer autoClose={3000} hideProgressBar />
-    <MenuSansPostBack/>     
+  <ToastContainer autoClose={3000} hideProgressBar />  
+    <MenuSansPostBack/>
+    <Switch>     
       <Route path="/" exact component={Accueil}/>
       <Route path="/AjouterRapport" component={AjouterRapport}/>
-      <Route path="/Rapports/:titre" component={FormEditerRapport}/>    
-      {(location.pathname != "/AjouterRapport" && !location.pathname.startsWith("/Rapports")) && <BoutonAjouterRapport/> }
-      
+      <Route path="/EditerRapport" component={FormEditerRapport}/> 
+    </Switch>
       <br></br>
+      {(location.pathname != "/AjouterRapport" && !location.pathname.startsWith("/EditerRapport")) && <BoutonAjouterRapport/> }      
+      
     <BoutonInstallPWA/>  
+    <br></br>
   </>
   );
 }
