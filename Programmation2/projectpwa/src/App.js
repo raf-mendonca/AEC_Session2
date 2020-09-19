@@ -13,7 +13,7 @@ import FormEditerRapport from './components/FormEditerRapport';
 import {Route, Switch, Redirect } from 'react-router-dom' 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './App.sass'
+import './App.css'
 
 
 function App() {
@@ -25,14 +25,12 @@ function App() {
     <Switch>     
       <Route path="/" exact component={Accueil}/>
       <Route path="/AjouterRapport" component={AjouterRapport}/>
-      <Route path="/EditerRapport" component={FormEditerRapport}/> 
+      <Route path="/Rapports/:nom" component={FormEditerRapport}/> 
+      
     </Switch>
       <br></br>
       {(location.pathname != "/AjouterRapport" && !location.pathname.startsWith("/EditerRapport")) && <BoutonAjouterRapport/> }      
-      
-    <BoutonInstallPWA/>  
-    <br></br>
-  </>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
-import {API} from "../constantes";
+import {API } from "../constantes";
 import { Container, Row, Col } from "react-bootstrap";
+import CardGroup from "react-bootstrap/CardGroup";
 import { Rapports } from "./Rapports";
 
 export class Accueil extends React.Component {
@@ -25,11 +26,9 @@ export class Accueil extends React.Component {
 
   render() {
     return (      
-      <Container>
-        <Row>
-          <h1 className="text-muted mb-3">Rapports de voyages</h1> 
-        </Row>
-        <Row>
+      <Container>        
+          <h1 className="text-muted mb-3 text-center">Rapports de voyages</h1>         
+        <Row>      
         {this.state.donneesRecues.map((key,i) => (
             <Rapports 
                     titre={key.theme}

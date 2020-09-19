@@ -1,6 +1,7 @@
 import React from "react";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import BoutonInstallPWA from './BoutonInstallPWA';
 
 export class MenuSansPostBack extends React.Component {
   constructor(props) {
@@ -18,10 +19,11 @@ export class MenuSansPostBack extends React.Component {
         <Nav className="mr-auto">
             <NavLink  className="mr-3" exact to="/" >Accueil</NavLink>
             <NavLink  className="mr-3" to="/AjouterRapport">Ajouter Voyage</NavLink> 
-            <NavLink  className="mr-3" to="/EditerRapport">Editer Voyage</NavLink> 
             <NavLink  className="mr-3" to="/ShortenURL">POST</NavLink>
         </Nav>
-       
+        <Nav>
+          <BoutonInstallPWA/>
+        </Nav>       
         </Navbar.Collapse>
         </Navbar>  
       </>

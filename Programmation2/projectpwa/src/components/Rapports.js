@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
-import '../App.sass'
+import CardColumns from "react-bootstrap/CardColumns";
+import Row from "react-bootstrap/Row";
+import Col  from "react-bootstrap/Col";
+
+
+import '../main.sass'
 
 export class Rapports extends React.Component {
   constructor(props) {
@@ -11,17 +15,20 @@ export class Rapports extends React.Component {
 
   render() {
     return ( 
-      <CardGroup>
-            <Card > 
-              <Card.Img variant="top" src={this.props.photo} rounded width="125" />       
+      
+      <Col xs={12} sm={6} lg={6}>
+            <Card className="mt-3 " style={{ width: "26rem"}}> 
+              <Card.Img variant="top" src={this.props.photo} />       
               <Card.Body>
                 <Link to={"Rapports/"+ this.props.titre + "?id=" + this.props.id}>
-                    <Card.Subtitle>{this.props.nom}</Card.Subtitle>
+                    <Card.Subtitle></Card.Subtitle>
+                    <h4>{this.props.nom}</h4>
+                    <p>{this.props.utisateur}</p>
                     <Card.Text className="text-justify">{this.props.rapport_voyage}</Card.Text>
                 </Link>
               </Card.Body>
             </Card>
-      </CardGroup>     
+      </Col>         
     );
   }
 }

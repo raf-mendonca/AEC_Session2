@@ -615,7 +615,8 @@ export class Catalogue extends React.Component {
         <Row>
           
         </Row>
-        <Row>
+        <Row>y
+          
           {this.AfficherAlbums()}
         </Row>
       </Container>
