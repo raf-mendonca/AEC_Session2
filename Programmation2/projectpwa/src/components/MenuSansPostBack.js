@@ -2,6 +2,7 @@ import React from "react";
 import { Nav, Navbar, NavItem } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import BoutonInstallPWA from './BoutonInstallPWA';
+import '../App.sass';
 
 export class MenuSansPostBack extends React.Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export class MenuSansPostBack extends React.Component {
    
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="shadow menu">
         <Navbar.Brand href="/Accueil">BlogTours</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

@@ -9,7 +9,7 @@ export class BoutonAjouterRapport extends React.Component {
   render() {
     return (
       <> 
-        <Link to="/AjouterRapport" className="btn btn-primary mt-5">
+        <Link to="/AjouterRapport" className="btn btn-primary mt-5 rounded-0">
           Ajouter un Rapport de Voyage
         </Link>
       </>

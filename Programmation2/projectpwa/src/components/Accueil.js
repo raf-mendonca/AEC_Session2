@@ -3,6 +3,8 @@ import {API } from "../constantes";
 import { Container, Row, Col } from "react-bootstrap";
 import CardGroup from "react-bootstrap/CardGroup";
 import { Rapports } from "./Rapports";
+import { Slide } from "react-awesome-reveal";
+import '../App.sass';
 
 export class Accueil extends React.Component {
   constructor(props) {
@@ -26,21 +28,26 @@ export class Accueil extends React.Component {
 
   render() {
     return (      
-      <Container>        
-          <h1 className="text-muted mb-3 text-center">Rapports de voyages</h1>         
-        <Row>      
+      <Container className="colorTestSass"> 
+      <Row>
+        <Slide triggerOnce>         
+          <h1 className="text-muted mb-3 text-center">Rapports de voyages</h1>
+          <h1>SASS funcionando</h1> 
+          </Slide> 
+      </Row>
+      <Row>             
         {this.state.donneesRecues.map((key,i) => (
             <Rapports 
                     titre={key.theme}
-                    id={key._id}
-                    key={key.titre + key._id}
                     nom={key.utilisateur}
+                    id={key._id}
+                    key={key.titre + key._id}                    
                     photo={key.picture} 
                     rapport_voyage={key.rapport}
                     >
             </Rapports>
-          ))}
-        </Row>
+          ))}                   
+        </Row>        
       </Container>      
     );
   }    

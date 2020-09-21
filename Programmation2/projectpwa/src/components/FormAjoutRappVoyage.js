@@ -3,6 +3,7 @@ import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
 import {Redirect} from "react-router-dom";
 import { API } from '../constantes.js';
 import {toast} from "react-toastify";
+import '../App.sass';
 
 export class FormAjoutRappVoyage extends React.Component {
   constructor(props) {
@@ -67,22 +68,22 @@ export class FormAjoutRappVoyage extends React.Component {
             <Form>
               <Form.Group controlId="titreRapport">
                 <Form.Label>Titre</Form.Label>
-                <Form.Control type="text" placeholder="Entrer le titre du Rapport de voyage" />
+                <Form.Control className="rounded-0" type="text" placeholder="Entrer le titre du Rapport de voyage" />
               </Form.Group>
               <Form.Group controlId="nomRapport">
                 <Form.Label>Nom du utilisateur</Form.Label>
-                <Form.Control type="text" placeholder="Entrer votre nom" />
+                <Form.Control className="rounded-0" type="text" placeholder="Entrer votre nom" />
               </Form.Group>
               <Form.Group controlId="photoRapport">
                 <Form.Label>URL d'une photo de la destination</Form.Label>
-                <Form.Control type="text" placeholder="Entrer une URL valide" onBlur={this.handlePhoto}/>
+                <Form.Control className="rounded-0" type="text" placeholder="Entrer une URL valide" onBlur={this.handlePhoto}/>
               </Form.Group>
               {this.state.photo !== "" && <Image src={this.state.photo} rounded width="125"/>}
               <Form.Group controlId="rapport_voyageRapport">
                 <Form.Label>Décrivez votre expérience de voyage</Form.Label>
-                <Form.Control type="text" placeholder="Entrer votre expérience de voyage." />
+                <Form.Control className="rounded-0" type="text" placeholder="Entrer votre expérience de voyage." />
               </Form.Group>
-                <Button variant="primary" type="submit" onClick={this.handleAdd}>
+                <Button className="rounded-0" variant="primary" type="submit" onClick={this.handleAdd}>
                     Enregistrer
                 </Button>
             </Form>  

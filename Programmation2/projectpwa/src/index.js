@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './main.sass';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router} from 'react-router-dom' 
+import './App.sass'
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+    
       <App />
     </Router>
   </React.StrictMode>,

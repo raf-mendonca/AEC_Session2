@@ -8,12 +8,12 @@ import { Accueil } from './components/Accueil';
 import { MenuSansPostBack } from './components/MenuSansPostBack';
 import { AjouterRapport } from './components/AjouterRapport';
 import { BoutonAjouterRapport } from './components/BoutonAjouterRapport';
-import { EditerRapport } from './components/EditerRapport';
 import FormEditerRapport from './components/FormEditerRapport';
 import {Route, Switch, Redirect } from 'react-router-dom' 
 import { ToastContainer } from 'react-toastify';
+import './App.sass';
 import 'react-toastify/dist/ReactToastify.css';
-import './App.css'
+
 
 
 function App() {
@@ -21,16 +21,16 @@ function App() {
   return (
   <>
   <ToastContainer autoClose={3000} hideProgressBar />  
-    <MenuSansPostBack/>
+    <MenuSansPostBack className="colorTestSass"/>
     <Switch>     
-      <Route path="/" exact component={Accueil}/>
+      <Route path="/" className="mt-5" exact component={Accueil}/>
       <Route path="/AjouterRapport" component={AjouterRapport}/>
-      <Route path="/Rapports/:nom" component={FormEditerRapport}/> 
-      
-    </Switch>
+      <Route path="/Rapports/:nom" component={FormEditerRapport}/>       
+    </Switch>  
       <br></br>
-      {(location.pathname != "/AjouterRapport" && !location.pathname.startsWith("/EditerRapport")) && <BoutonAjouterRapport/> }      
+      {(location.pathname != "/AjouterRapport" && !location.pathname.startsWith("/EditerRapport")) && <BoutonAjouterRapport/> }     
     </>
+    
   );
 }
 
