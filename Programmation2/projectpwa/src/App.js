@@ -9,6 +9,7 @@ import { MenuSansPostBack } from './components/MenuSansPostBack';
 import { AjouterRapport } from './components/AjouterRapport';
 import { BoutonAjouterRapport } from './components/BoutonAjouterRapport';
 import FormEditerRapport from './components/FormEditerRapport';
+import { AfficheVoyage } from './components/AfficheVoyage';
 import {Route, Switch, Redirect } from 'react-router-dom' 
 import { ToastContainer } from 'react-toastify';
 import './App.sass';

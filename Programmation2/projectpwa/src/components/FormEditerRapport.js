@@ -104,10 +104,10 @@ async function removeRapport() {
                 <Form.Label>URL d'une photo de la destination</Form.Label>
                 <Form.Control className="rounded-0" type="text" placeholder="Entrer une URL valide" onBlur={handlePhoto} defaultValue={donneesRecues.picture}/>
               </Form.Group>
-              {donneesRecues.picture !== "" && <Image src={donneesRecues.picture} rounded width="125"/>}
+              {donneesRecues.picture !== "" && <Image src={donneesRecues.picture} rounded-0 width="300"/>}
               <Form.Group controlId="rapport_voyageRapport">
                 <Form.Label>Décrivez votre expérience de voyage</Form.Label>
-                <Form.Control className="rounded-0" type="text" placeholder="Entrer votre expérience de voyage." defaultValue={donneesRecues.rapport}/>
+                <Form.Control className="rapport rounded-0" type="textarea" placeholder="Entrer votre expérience de voyage." defaultValue={donneesRecues.rapport}/>
               </Form.Group>
              
             <Button className="rounded-0" variant="primary" type="submit" onClick={handleEdit}>

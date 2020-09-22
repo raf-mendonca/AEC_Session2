@@ -62,26 +62,27 @@ export class FormAjoutRappVoyage extends React.Component {
     console.log(this.props.history);
     return (
       <>
-      <Container>
+      <Container fluid className="postal_parallax">
+      <Container >
         <Row>
           <Col>
-            <Form>
+            <Form className="m-5 p-5">
               <Form.Group controlId="titreRapport">
-                <Form.Label>Titre</Form.Label>
+                <Form.Label className="bg-form">Titre</Form.Label>
                 <Form.Control className="rounded-0" type="text" placeholder="Entrer le titre du Rapport de voyage" />
               </Form.Group>
               <Form.Group controlId="nomRapport">
-                <Form.Label>Nom du utilisateur</Form.Label>
+                <Form.Label className="bg-form">Nom du utilisateur</Form.Label>
                 <Form.Control className="rounded-0" type="text" placeholder="Entrer votre nom" />
               </Form.Group>
               <Form.Group controlId="photoRapport">
-                <Form.Label>URL d'une photo de la destination</Form.Label>
+                <Form.Label className="bg-form">URL d'une photo de la destination</Form.Label>
                 <Form.Control className="rounded-0" type="text" placeholder="Entrer une URL valide" onBlur={this.handlePhoto}/>
               </Form.Group>
-              {this.state.photo !== "" && <Image src={this.state.photo} rounded width="125"/>}
+              {this.state.photo !== "" && <Image src={this.state.photo} rounded-0 width="300"/>}
               <Form.Group controlId="rapport_voyageRapport">
-                <Form.Label>Décrivez votre expérience de voyage</Form.Label>
-                <Form.Control className="rounded-0" type="text" placeholder="Entrer votre expérience de voyage." />
+                <Form.Label className="bg-form">Décrivez votre expérience de voyage</Form.Label>
+                <Form.Control as="textarea" className="rapport rounded-0" type="text" placeholder="Entrer votre expérience de voyage." />
               </Form.Group>
                 <Button className="rounded-0" variant="primary" type="submit" onClick={this.handleAdd}>
                     Enregistrer
@@ -89,6 +90,7 @@ export class FormAjoutRappVoyage extends React.Component {
             </Form>  
             </Col>    
           </Row>
+        </Container>
         </Container>
       </>
     );
