@@ -8,7 +8,8 @@ import { AjouterRapport } from './components/AjouterRapport';
 import { BoutonAjouterRapport } from './components/BoutonAjouterRapport';
 import FormEditerRapport from './components/FormEditerRapport';
 import { PageNotFound } from './components/PageNotFound';
-import {Route, Switch, Redirect } from 'react-router-dom' 
+import {Route, Switch, Redirect } from 'react-router-dom';
+import { Nav, Navbar, Navlink } from "react-bootstrap"; 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.sass';
