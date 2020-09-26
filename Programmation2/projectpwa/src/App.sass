@@ -1,10 +1,14 @@
-// 
+//Étudiant: Rafael De Mendonça 
+//Cours: Tech. Intégrationdes interfaces web2
+//Date: 2020-09-26
+
+
 $mainColor:  #407294
 $barColor: #e3f2fd 
 $fontStack: 'Montserrat', sans-serif
 $font-size: 1em
 
-
+//BG Page Accuel / Afiche cards
 body
     font-family: $fontStack
     background-color: $barColor
@@ -33,6 +37,7 @@ a:hover
     width: 1400px
     height: 100%
 
+//Parallax form Editer et ajouter
 .parallax
     width: 100vw
     height: 100vh
@@ -43,8 +48,7 @@ a:hover
 
 .postal_parallax
     @extend .parallax
-    background-image: url(./img/wave.jpg)
-     
+    background-image: url(./img/wave.jpg)     
 
 .edit_parallax
     @extend .parallax
@@ -55,6 +59,7 @@ a:hover
     display: inline-block 
 
 
+//Style des formulaires
 @mixin btnColors($font-color, $font-size: 1em)
     font-size: $font-size
     padding: $font-size/2

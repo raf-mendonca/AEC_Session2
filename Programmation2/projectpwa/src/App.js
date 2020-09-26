@@ -17,9 +17,10 @@ import './App.sass';
 
 function App() {
   let location = useLocation();
+
   return (
   <>
-  <ToastContainer autoClose={3000} hideProgressBar />  
+  <ToastContainer autoClose={3000} hideProgressBar /> 
     <MenuSansPostBack/> 
     <Switch>    
       <Route path="/" className="mt-5" exact component={Accueil}/>

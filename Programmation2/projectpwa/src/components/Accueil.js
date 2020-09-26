@@ -3,6 +3,7 @@ import {API } from "../constantes";
 import { Container, Row } from "react-bootstrap";
 import { Rapports } from "./Rapports";
 import { Slide } from "react-awesome-reveal";
+import ParticlesBg from "particles-bg";
 import '../App.sass';
 
 export class Accueil extends React.Component {
@@ -26,14 +27,15 @@ export class Accueil extends React.Component {
   }
 
   render() {
-    return (      
+    return (     
+      <> 
       <Container>
       <Row>
         <Slide triggerOnce>         
           <h1 className="text-muted mb-3">Rapports de voyages</h1>
         </Slide> 
       </Row>
-      <Row>             
+      <Row>                  
         {this.state.donneesRecues.map((key,i) => (
             <Rapports 
                     titre={key.theme}
@@ -46,7 +48,8 @@ export class Accueil extends React.Component {
             </Rapports>
           ))}                   
         </Row> 
-      </Container>     
+      </Container>
+      </>     
     );
   }    
 }
