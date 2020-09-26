@@ -1,7 +1,6 @@
 import React from "react";
 import {API } from "../constantes";
-import { Container, Row, Col } from "react-bootstrap";
-import CardGroup from "react-bootstrap/CardGroup";
+import { Container, Row } from "react-bootstrap";
 import { Rapports } from "./Rapports";
 import { Slide } from "react-awesome-reveal";
 import '../App.sass';
@@ -28,12 +27,11 @@ export class Accueil extends React.Component {
 
   render() {
     return (      
-      <Container className="colorTestSass"> 
+      <Container>
       <Row>
         <Slide triggerOnce>         
-          <h1 className="text-muted mb-3 text-center">Rapports de voyages</h1>
-          <h1>SASS funcionando</h1> 
-          </Slide> 
+          <h1 className="text-muted mb-3">Rapports de voyages</h1>
+        </Slide> 
       </Row>
       <Row>             
         {this.state.donneesRecues.map((key,i) => (
@@ -47,8 +45,8 @@ export class Accueil extends React.Component {
                     >
             </Rapports>
           ))}                   
-        </Row>        
-      </Container>      
+        </Row> 
+      </Container>     
     );
   }    
 }

@@ -1,6 +1,5 @@
 import React , {useState , useEffect} from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
-import {Redirect} from "react-router-dom";
 import { API } from '../constantes.js';
 import {toast} from "react-toastify";
 import '../App.sass';
@@ -88,6 +87,7 @@ async function removeRapport() {
   }
     return (
       <>
+      <Container fluid className="edit_parallax">
       <Container>
         <Row>
           <Col>
@@ -117,6 +117,7 @@ async function removeRapport() {
             </Col>    
           </Row>
           <p className="btn btn-danger mt-5 rounded-0" onClick={removeRapport}>Supprimer Rapport de voyage</p>
+          </Container>
         </Container>
       </>
     );

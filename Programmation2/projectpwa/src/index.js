@@ -8,8 +8,7 @@ import './App.sass'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-    
+    <Router>    
       <App />
     </Router>
   </React.StrictMode>,

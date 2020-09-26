@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
-import {Redirect} from "react-router-dom";
 import { API } from '../constantes.js';
 import {toast} from "react-toastify";
 import '../App.sass';

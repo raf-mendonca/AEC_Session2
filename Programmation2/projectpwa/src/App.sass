@@ -1,6 +1,13 @@
 // 
 $mainColor:  #407294
 $barColor: #e3f2fd 
+$fontStack: 'Montserrat', sans-serif
+$font-size: 1em
+
+
+body
+    font-family: $fontStack
+    background-color: $barColor
 
 h1, h4, p
     color: $mainColor
@@ -15,33 +22,48 @@ a:hover
     margin-top: 40px
     padding-top: 60px
 
-
-.postal_parallax
-    background-image: url(./img/wave.jpg)
-    height: 100vh
-    background-attachment: fixed
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-    position: relative
-
 .bg-ligth-blue
     background-color: $barColor
     color: white
 
-.bg-form
-    background-color: #008BAA
-    color: white
-    padding: 0.5em
-
 .container
-    min-height: 480px  
+    min-height: 480px
+
+.error404
+    width: 1400px
+    height: 100%
+
+.parallax
+    width: 100vw
+    height: 100vh
+    background-attachment: fixed
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+.postal_parallax
+    @extend .parallax
+    background-image: url(./img/wave.jpg)
+     
+
+.edit_parallax
+    @extend .parallax
+    background-image: url(./img/under_water.jpg)
    
 
 .postal_parallax .container
-    display: inline-block
-     
+    display: inline-block 
 
-body
-    font-family: 'Montserrat', sans-serif
-    background-color: $barColor
+
+@mixin btnColors($font-color, $font-size: 1em)
+    font-size: $font-size
+    padding: $font-size/2
+    background-color: #001324
+    color: $font-color
+
+.bg-form
+    @include btnColors($font-color: #fff, $font-size: 1.2em)
+
+.btn-style
+    @include btnColors($font-color: #fff, $font-size: 1.2em)
+
