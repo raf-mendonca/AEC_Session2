@@ -3,7 +3,6 @@ import {API } from "../constantes";
 import { Container, Row } from "react-bootstrap";
 import { Rapports } from "./Rapports";
 import { Slide } from "react-awesome-reveal";
-import ParticlesBg from "particles-bg";
 import '../App.sass';
 
 export class Accueil extends React.Component {

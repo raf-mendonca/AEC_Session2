@@ -40,7 +40,7 @@ export class Rapports extends React.Component {
 
     return ( 
       <Col xs={12} sm={6} lg={6}>    
-        <CardGroup><ParticlesBg type="polygon" config={config} bg={true}/>    
+        <CardGroup><ParticlesBg type="square" config={config} bg={true}/>    
             <Card className="rounded-0 bg-white mt-3 shadow mb-5"> 
               <Card.Img className="img-fluid rounded-0" variant="top" src={this.props.photo} />       
               <Card.Body>
