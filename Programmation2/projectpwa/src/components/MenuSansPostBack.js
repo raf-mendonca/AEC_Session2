@@ -1,3 +1,8 @@
+//Étudiant: Rafael De Mendonça 
+//Projet Final: PWA / CrudCrud - BlogTours
+//Cours: Tech. Intégration des interfaces web2 et Techniques de Programmation Web 2
+//Date: 2020-09-27
+
 import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";

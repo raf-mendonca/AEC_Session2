@@ -1,3 +1,8 @@
+//Étudiant: Rafael De Mendonça 
+//Projet Final: PWA / CrudCrud - BlogTours
+//Cours: Tech. Intégration des interfaces web2 et Techniques de Programmation Web 2
+//Date: 2020-09-27
+
 import React , {useState , useEffect} from "react";
 import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
 import { API } from '../constantes.js';
@@ -91,7 +96,9 @@ async function removeRapport() {
       <Container>
         <Row>
           <Col>
-            <Form className="custom">
+            <Form 
+            
+            >
               <Form.Group controlId="titreRapport">
                 <Form.Label>Titre</Form.Label>
                 <Form.Control  className="rounded-0" type="text" defaultValue={donneesRecues.theme}/> {/*/ Faire le test avec value*/}

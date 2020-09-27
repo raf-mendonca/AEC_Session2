@@ -1,8 +1,13 @@
+//Étudiant: Rafael De Mendonça 
+//Projet Final: PWA / CrudCrud - BlogTours
+//Cours: Tech. Intégration des interfaces web2 et Techniques de Programmation Web 2
+//Date: 2020-09-27
+
 import React from "react";
 import {API } from "../constantes";
 import { Container, Row } from "react-bootstrap";
 import { Rapports } from "./Rapports";
-import { Slide } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal"; //Librerie d'animation react-awesome-reveal
 import '../App.sass';
 
 export class Accueil extends React.Component {
@@ -34,7 +39,7 @@ export class Accueil extends React.Component {
           <h1 className="text-muted mb-3">Rapports de voyages</h1>
         </Slide> 
       </Row>
-      <Row>                  
+      <Row  className="d-flex justify-content-around">                  
         {this.state.donneesRecues.map((key,i) => (
             <Rapports 
                     titre={key.theme}

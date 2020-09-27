@@ -1,5 +1,12 @@
+//Étudiant: Rafael De Mendonça 
+//Projet Final: PWA / CrudCrud - BlogTours
+//Cours: Tech. Intégration des interfaces web2 et Techniques de Programmation Web 2
+//Date: 2020-09-27
+
 import React from "react";
-import { Form, Button,Image,Container,Row,Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import { Form, Button, Image } from "react-bootstrap"
+
 import { API } from '../constantes.js';
 import {toast} from "react-toastify";
 import '../App.sass';
@@ -62,14 +69,14 @@ export class FormAjoutRappVoyage extends React.Component {
     return (
       <>
       <Container fluid className="postal_parallax">
-      <Container >
-        <Row>
-          <Col>
-            <Form className="m-5 p-5">
-              <Form.Group controlId="titreRapport">
-                <Form.Label className="bg-form">Titre</Form.Label>
-                <Form.Control className="rounded-0" type="text" placeholder="Entrer le titre du Rapport de voyage" />
-              </Form.Group>
+        <Container >
+          <Row>
+            <Col>
+              <Form className="my-5">
+                <Form.Group controlId="titreRapport">
+                  <Form.Label className="bg-form">Titre</Form.Label>
+                  <Form.Control className="rounded-0" type="text" placeholder="Entrer le titre du Rapport de voyage" />
+                </Form.Group>
               <Form.Group controlId="nomRapport">
                 <Form.Label className="bg-form">Nom du utilisateur</Form.Label>
                 <Form.Control className="rounded-0" type="text" placeholder="Entrer votre nom" />
@@ -85,8 +92,8 @@ export class FormAjoutRappVoyage extends React.Component {
               </Form.Group>
                 <Button className="rounded-0" variant="primary" type="submit" onClick={this.handleAdd}>
                     Enregistrer
-                </Button>
-            </Form>  
+              </Button>
+              </Form>  
             </Col>    
           </Row>
         </Container>

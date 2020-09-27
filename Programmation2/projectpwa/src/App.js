@@ -22,11 +22,12 @@ function App() {
   <>
   <ToastContainer autoClose={3000} hideProgressBar /> 
     <MenuSansPostBack/> 
-    <Switch>    
+    <Switch>  
+      <Redirect exact from="/" to="/Accueil" />  
       <Route path="/" className="mt-5" exact component={Accueil}/>
+      <Route path="/Accueil" component={Accueil} /> 
       <Route path="/AjouterRapport" component={AjouterRapport}/>
       <Route path="/Rapports/:nom" component={FormEditerRapport}/>
-      <Redirect from="https://raf-mendonca.github.io/AEC_Session2/Programmation2/projectpwa/build/index.html" to="/"/>
       <Route  component={PageNotFound} />       
     </Switch>  
       <br></br>

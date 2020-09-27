@@ -1,7 +1,12 @@
+//Étudiant: Rafael De Mendonça 
+//Projet Final: PWA / CrudCrud - BlogTours
+//Cours: Tech. Intégration des interfaces web2 et Techniques de Programmation Web 2
+//Date: 2020-09-27
+
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, CardGroup, Col } from "react-bootstrap";
-import ParticlesBg from "particles-bg";
+import { Card, CardGroup, Col, Row, Container } from "react-bootstrap";
+import ParticlesBg from "particles-bg"; //Cette librerie n'ai marche pas sur GitHubPages
 import '../App.sass';
 
 
@@ -40,7 +45,7 @@ export class Rapports extends React.Component {
 
     return ( 
       <Col xs={12} sm={6} lg={6}>    
-        <CardGroup><ParticlesBg type="square" config={config} bg={true}/>    
+        <CardGroup><ParticlesBg type="squarep" config={config} bg={true}/>    
             <Card className="rounded-0 bg-white mt-3 shadow mb-5"> 
               <Card.Img className="img-fluid rounded-0" variant="top" src={this.props.photo} />       
               <Card.Body>
