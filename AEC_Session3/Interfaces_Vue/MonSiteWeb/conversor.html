@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conversor de témperature</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    
+
+    <!--Feuilles de styles-->
+    <link rel="stylesheet" href="./style/monstyle.css">
+
+  </head>
+  <body>
+    <nav>
+        <a href="accueil.html">Àccueil</a> |
+        <a href="apropos.html">À propos</a> |
+    </nav> 
+    <div id="app-conversor" class="bg-ex1">
+        <h3>Exercice 4 - Conversor de témperature - v-model</h3>
+        <p>temperature C <input v-model=tempC @change="c2f()" @input="c2f()" type=number></p>
+        <p>temperature F <input v-model=tempF @change="f2c()" @input="f2c()" type=number></p>
+      </div>
+    
+    <script src="js/conversor.js"></script>
+  </body>
+</html>

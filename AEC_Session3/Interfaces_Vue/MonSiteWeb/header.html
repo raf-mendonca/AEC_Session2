@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Mon Site Vue</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!--Librairies-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--Copier le lien hover-master si besoin-->
+    <link rel="stylesheet" href="Hover-master/css/hover-min.css">
+    
+    <!--Feuilles de styles-->
+    <link rel="stylesheet" href="./style/monstyle.css">
+    <!--Scripts-->
+    <script src="js/dynamic.js"></script>
+</head>
+
+<body>
+    <nav>
+        <a href="accueil.html">Àccueil</a> |
+        <a href="apropos.html">À propos</a> |
+    </nav>   
+    
+    <div id="app">
+        <h1>Firstname : {{firstname}}</h1>
+        <h1>Lastname : {{lastname}}</h1>
+        <h1>{{mydetails()}}</h1>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

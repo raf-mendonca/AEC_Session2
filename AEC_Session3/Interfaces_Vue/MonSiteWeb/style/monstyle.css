@@ -1,0 +1,58 @@
+
+
+
+.container { 
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center  
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: navy;
+}
+
+/*Blink*/
+.blink_me {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    height: 100px;
+    background-color: #999999;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    height: 200px;
+    background-color: #999999;
+  }
+
+  #app {
+    margin-top: 5em;
+  }
+
+  #app-conversor {
+    margin-top: 5em;
+  }
+
+  .bg-ex1 {
+    background-color: dodgerblue;
+  }
