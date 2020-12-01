@@ -1,0 +1,19 @@
+
+<div [ngClass]="{'favori': nom ==='Cyclope'}">
+     <span *ngIf="nom==='Cyclope'"><br> (Mon héro favori!!)</span>
+</div>
+<!--
+  <div>
+    <label [(ngModel)]="nom">{{nom}}</label>
+    <input [(ngModel)]="nom" type="text" class="form-control">
+</div>
+  
+-->
+
+
+<div>
+    <label>{{nom}}</label><br>
+    <input [value]="nom" type="text" (input)="nom = $event.target.value"> 
+</div>
+
+

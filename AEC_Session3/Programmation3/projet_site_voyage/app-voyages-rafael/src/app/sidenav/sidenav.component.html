@@ -1,0 +1,33 @@
+  
+  <!--Sidenav menu-->
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+        <app-formulaire-forfait ></app-formulaire-forfait>
+  </mat-drawer> 
+  
+  <mat-drawer-container class="bg-vacation" autosize>
+    <div class="example-sidenav-content">
+      <button mat-stroked-button color="primary" type="button" mat-button (click)="drawer.toggle()">
+        Recherche
+      </button>
+    </div>
+
+    <!--Atuaclisé le 23-11-2020-->
+    <div >  
+      <mat-grid-list cols="3" rowHeight="2:1">
+          <span *ngFor="let item of mesForfaits">
+              <mat-grid-tile  *ngIf="item.forfaitVedette" >
+                  <app-minicomp  class="box" [forfait]="item"></app-minicomp >
+              </mat-grid-tile>
+          </span>
+      </mat-grid-list>
+    </div>
+    <div>
+      <mat-grid-list cols="1" rowHeight='4:1'>
+          <mat-grid-tile *ngFor="let item of mesForfaits">
+              <app-maxicomp class="box-maxicomp" [forfait]="item"></app-maxicomp >
+          </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  <!---->   
+  
+  </mat-drawer-container>

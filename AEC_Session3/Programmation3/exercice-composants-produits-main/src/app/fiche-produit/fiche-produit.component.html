@@ -1,0 +1,24 @@
+<!--
+<img src="assets/img/produit.png" alt="img" />-->
+
+<div>
+    <app-detail-fiche-produit [nom]="produit.nom" [description]="produit.description"></app-detail-fiche-produit>
+</div>
+
+<div>
+    {{produit.prix}}<br>
+    <a href="#">Lien vers le produit</a>
+</div>
+<div>
+    <div *ngIf="produit.qteStock === 0">
+        {{produit.qteStock}}<span> Non disponible.</span>
+    </div>
+    <div *ngIf="produit.qteStock >= 1 AND produit.qteStock <= 5">{{produit.qteStock}}<span> Quantité limité.</span>
+    </div>
+</div>
+<div *ngFor="let produit of produits | qteNegative>
+    <app-fiche-produit [produit]="produit"></app-fiche-produit>
+</div>
+
+
+

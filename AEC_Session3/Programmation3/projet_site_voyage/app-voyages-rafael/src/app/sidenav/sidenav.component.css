@@ -1,0 +1,58 @@
+
+button {
+  margin-top: 2em;
+  width: 25%;
+  font-size: 2em;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+  
+.example-sidenav {
+    padding: 20px;
+}
+.bg-vacation {
+    background: url("../../assets/img/playa.jpg")  no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+     /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center  
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center 
+}
+
+.box-maxicomp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center 
+}

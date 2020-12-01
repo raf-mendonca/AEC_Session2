@@ -1,0 +1,44 @@
+<mat-card class="container">
+    <mat-card-header >
+        <mat-card-title-group>
+            <div class="grid-item-1">   
+                <div class="grid-subitem-1">
+                    <mat-card-title>Hotel {{forfait.hotel.nom}}</mat-card-title>
+                </div>         
+                <div class="grid-subitem-2">
+                    <mat-card-title>{{forfait.destination}}</mat-card-title>
+                </div>
+                <div class="grid-subitem-3">
+                    <mat-card-subtitle>de {{forfait.villeDeDepart}}</mat-card-subtitle>
+                </div>            
+        </div>                          
+
+        </mat-card-title-group>        
+        <!--<mat-card-title>{{forfait.destination}}</mat-card-title>
+        <mat-card-subtitle>de {{forfait.villeDeDepart}}</mat-card-subtitle>
+        <div  *ngIf="forfait.forfaitVedette">
+            <mat-card-subtitle>Forfait Vedette</mat-card-subtitle>
+        </div>-->
+    </mat-card-header>
+    <mat-card-content>
+        Hotel {{forfait.hotel.nom}} 
+    </mat-card-content>
+
+    <mat-card-actions>
+        <div id="div-actions" *ngIf="forfait.rabais>0; else elseBlock">
+            <p id="p-ancien">{{forfait.prix}}$</p>
+            <p id="p-rabais">{{forfait.rabais}}$</p>
+            <p id="p-reel">{{forfait.prix-forfait.rabais}}$</p>
+        </div>
+        <ng-template #elseBlock><p>{{forfait.prix}}$</p></ng-template>
+    </mat-card-actions>
+    
+    <mat-card-footer>
+        <app-star-rating>{{forfait.hotel.etoiles}} étoiles</app-star-rating>
+        <!--<div *ngFor='let item of forfait'>
+        <app-star-rating [forfait.hotel.etoiles]='item'></app-star-rating>
+        </div>-->
+        
+        <p>{{forfait.dateDepart}}, 7 jours</p>
+    </mat-card-footer>
+  </mat-card>

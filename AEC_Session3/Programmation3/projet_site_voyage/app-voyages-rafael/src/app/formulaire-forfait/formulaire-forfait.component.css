@@ -1,0 +1,25 @@
+
+div {
+    
+    justify-content: space-between;
+    margin: 5em;
+    width: 100%;
+    height: auto;
+}
+mat-label , mat-form-field{
+  color:  #0C5776;
+  font-weight: bold;
+}
+
+.example-form {
+    
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+
